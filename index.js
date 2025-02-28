@@ -78,6 +78,10 @@ function calculateBotScore(behaviorData) {
     return score;
 }
 
+app.get("/", (req, res) => {
+    res.send("Hello World!");
+});
+
 app.post("/api/detect", (req, res) => {
     const behaviorData = req.body || {};
     console.log(behaviorData);
